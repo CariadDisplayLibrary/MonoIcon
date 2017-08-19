@@ -1,0 +1,4 @@
+MonoIcon.cpp libraries/DisplayCore/MonoIcon
+MonoIcon.h libraries/DisplayCore/MonoIcon
+MonoIconBG.cpp libraries/DisplayCore/MonoIcon
+examples/ libraries/DisplayCore/MonoIcon
