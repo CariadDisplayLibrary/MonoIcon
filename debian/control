@@ -12,7 +12,7 @@ XBSC-Group: DisplayCore
 XBSC-Subgroup: Toolkits
 Depends: libdisplaycore-core
 Provides: MonoIcon.h
-Description: MonoIcon library
+Description: MonoIcon
  The MonoIcon widgets system creates small stylish buttons with coloured icons on them.
  The colour of the icon is determined in software and each icon is loaded from a
  compatible icon set. Icons are an 8-bit array of alpha values which are applied to the
