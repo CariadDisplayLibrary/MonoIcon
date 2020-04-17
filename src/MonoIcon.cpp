@@ -53,10 +53,10 @@ void MonoIcon::draw(DisplayCore *dev, int x, int y) {
                     (py <= fg_y) ||
                     (py >= (fg_y + fg_h))
                 ) {
-                    setPixel(px, py, _bg[py * _sense_w + px]);
+                    setPixel(px, py, _bg == NULL ? Color::Black : _bg[py * _sense_w + px]);
                 } else {
                     int alpha = _icon[(py - fg_y) * fg_w + (px - fg_x)];
-                    color_t bg = _bg[py * _sense_w + px];
+                    color_t bg = _bg == NULL ? Color::Black : _bg[py * _sense_w + px];
                     color_t col = mix(bg, color, alpha * 2);
                     setPixel(px, py, col);
                 }
@@ -70,7 +70,7 @@ void MonoIcon::draw(DisplayCore *dev, int x, int y) {
     } else {
         for (int py = 0; py < _sense_h; py++) {
             for (int px = 0; px < _sense_w; px++) {
-                setPixel(px, py, _bg[py * _sense_w + px]);
+                setPixel(px, py, _bg == NULL ? Color::Black : _bg[py * _sense_w + px]);
             }
         }
 
@@ -96,5 +96,10 @@ void MonoIcon::setColor(color_t c) {
 
 void MonoIcon::setIcon(const uint8_t *i) {
     _icon = i;
+    redraw();
+}
+
+void MonoIcon::setBackground(const color_t *bg) {
+    _bg = bg;
     redraw();
 }
