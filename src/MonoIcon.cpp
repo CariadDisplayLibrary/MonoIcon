@@ -12,7 +12,7 @@ color_t MonoIcon::colorAt(int x, int y) {
     return _buffer[offset];
 }
 
-void MonoIcon::draw(DisplayCore *dev, int x, int y) {
+void MonoIcon::draw(Cariad *dev, int x, int y) {
 
     int voff = 0;
 

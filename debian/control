@@ -1,16 +1,17 @@
-Source: libdisplaycore-toolkit-monoicon
+Source: libcariad-toolkit-monoicon
 Section: main
 Priority: extra
 Maintainer: Matt Jenkins <matt@majenko.co.uk>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4
 
-Package: libdisplaycore-toolkit-monoicon
+Package: libcariad-toolkit-monoicon
+Replaces: libdisplaycore-toolkit-monoicon
 Section: main
 Architecture: all
-XBSC-Group: DisplayCore
+XBSC-Group: Cariad
 XBSC-Subgroup: Toolkits
-Depends: libdisplaycore-core
+Depends: libcariad-core
 Provides: MonoIcon.h
 Description: MonoIcon
  The MonoIcon widgets system creates small stylish buttons with coloured icons on them.
